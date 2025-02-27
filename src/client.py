@@ -14,9 +14,8 @@ class General(commands.Cog):
     @app_commands.command(name="echo-embed", description="Echo an embed to a channel")
     async def echo_embed(self, interaction: discord.Interaction, message: str, channel: discord.TextChannel):
         try:
-            # this is broken af
             channel = await interaction.guild.fetch_channel(channel.id)
-            embed = discord.embeds.Embed(title="hi", description=message, color=discord.Color.pink)
+            embed = discord.Embed(description=message, color=discord.Color.dark_purple())
             await channel.send(embed=embed)
         
         except discord.DiscordException as e:
