@@ -3,9 +3,11 @@
 **A Multi-Use Discord Bot specifically for TiesKey's FreeBuild Server.**  
 Developed by @meilaleinalainen ;)
 
+<br/>
 ## Hosting
 TiesBot is not currently hosted 24/7. Instead, it runs whenever @meilaleinalainen is actively working on it or idling. This will change in the future as more features are added.
 
+<br/>
 ## Usage
 
 ### Manager-Only Commands
@@ -27,7 +29,7 @@ Edit a message sent by @TiesBot.
 - `new_message: str` *(Required)* – The new message content. *(Must be sent by @TiesBot.)*
 - `is_id: bool = False` *(Optional, defaults to False)* – Whether `old_message` is a message ID.
 - `delete_origin: bool = False` *(Optional, defaults to False)* – Whether to delete the original message to avoid the "(edited)" tag.
-
+<br/>
 ### Public Commands
 
 #### `/github`  
