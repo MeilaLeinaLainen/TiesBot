@@ -7,12 +7,13 @@ Currently TiesBot is not being hosted 24/7, instead it is hosted whenever @meila
 
 ## Usage
 ### Manager-Only Commands
-`/echo (message: str, channel: discord.TextChannel, copy: bool = False, delete_origin: bool = False)` - Send a message with @TiesBot
-**Args:**
-`message: str` - Required. The message to send. If `copy` is True, input the message ID here..
-`channel: discord.TextChannel` - Optional, defaults to the channel the command is used in. Use #channel format.
-`copy: bool = False` - Optional, defaults to False. Whether to copy an already sent message.
-`delete_origin: bool = False` - Optional, defaults to False. Whether to delete the message to copy.
+| `/echo (message: str, channel: discord.TextChannel, copy: bool = False, delete_origin: bool = False)` | Send a message with @TiesBot |
+|----------|----------|----------|
+| `message: str` | Required. The message to send. If `copy` is True, input the message ID here. |
+| `channel: discord.TextChannel` | Optional, defaults to the channel the command is used in. Use #channel format. |
+| `copy: bool = False` | Optional, defaults to False. Whether to copy an already sent message. |
+| `delete_origin: bool = False` | Optional, defaults to False. Whether to delete the message to copy. |
+
 
 `/edit (old_message: str, new_message: str, is_id: bool = False, delete_origin: bool = False)` - Edit a message sent by @TiesBot
 **Args:**
