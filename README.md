@@ -16,10 +16,10 @@ Currently TiesBot is not being hosted 24/7, instead it is hosted whenever @meila
 
 `/edit (old_message: str, new_message: str, is_id: bool = False, delete_origin: bool = False)` - Edit a message sent by @TiesBot
 **Args:**
-`old_message: str` - Required. The message to edit to. If `is_id` is True, this shouldbe a message ID.
-`new_message: str` - Required. The message ID to edit. (HAS TO BE SENT BY @TiesBot)
-`is_id: bool = False` - Optional, defaults to False. Whether `new_message` is a message ID or not.
-`delete_origin: bool = False` - Optional, defaults to False. Whether to delete the original message to avoid the "(edited)
+- `old_message: str` - Required. The message to edit to. If `is_id` is True, this shouldbe a message ID.
+- `new_message: str` - Required. The message ID to edit. (HAS TO BE SENT BY @TiesBot)
+- `is_id: bool = False` - Optional, defaults to False. Whether `new_message` is a message ID or not.
+- `delete_origin: bool = False` - Optional, defaults to False. Whether to delete the original message to avoid the "(edited)
 
 ### Public Commands
 `/github`  - Send the GitHub link to @meilaleinalainen's source-code.
