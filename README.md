@@ -7,6 +7,7 @@ Currently TiesBot is not being hosted 24/7, instead it is hosted whenever @meila
 
 ## Usage
 ### Manager-Only Commands
+
 | `/echo (message: str, channel: discord.TextChannel, copy: bool = False, delete_origin: bool = False)` | Send a message with @TiesBot |
 |----------|----------|----------|
 | `message: str` | Required. The message to send. If `copy` is True, input the message ID here. |
