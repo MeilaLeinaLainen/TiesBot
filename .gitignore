@@ -1,4 +1,3 @@
 /.venv
 /.env
 __pycache__
-/gpt2-finetuned-models

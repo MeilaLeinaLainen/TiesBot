@@ -29,5 +29,6 @@ class Runner():
         except Exception as e:
             print(f"An error occurred while processing the config file: {str(e)}")
 
-Runner = Runner()
-asyncio.run(Runner.main())
+if __name__ == "__main__":
+    runner = Runner()
+    asyncio.run(runner.main())
