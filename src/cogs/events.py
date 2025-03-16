@@ -19,21 +19,23 @@ class Events(commands.Cog):
 
     @app_commands.command(name="ping")
     async def ping(self, interaction: discord.Interaction):
-        await interaction.response.send_message(f"Pong! :ping_pong: -- {floor((self.client.latency * 1000))}ms")
-
-    # DEBUG
-    @commands.Cog.listener()
-    async def on_error(self, event, *args, **kwargs):
-        emergency_channel = self.client.get_channel(self.EMERGENCY_CHANNEL)
-        await emergency_channel.send("Someone tell Meila there is an issue!")
-        await emergency_channel.send(f"Error: {args[0]}")
-        print(f"Error: {args[0]}")
+        try:
+            await interaction.response.defer()
+            await interaction.followup.send(f"Pong! :ping_pong: -- {floor((self.client.latency * 1000))}ms")
+        except discord.DiscordException as e:
+            logging.error(e)
+    @ping.error
+    async def ping_error(self, interaction: discord.Interaction, error):
+        try:
+            await interaction.response.send_message(f"Caught an unexpected error. Please contact Meila if this persists.")
+            await interaction.channel.send(f"Error: {error}")
+        except discord.DiscordException as e:
+            logging.error(e)
 
     # GUILDS
     @commands.Cog.listener()
     async def on_guild_join(self, guild):
-        system_channel = guild.system_channel
-        
+        pass
 
     @commands.Cog.listener()
     async def on_guild_remove(self, guild):
@@ -92,6 +94,7 @@ class Events(commands.Cog):
     async def on_presence_update(self, before, after):
         pass
 
+    # MESSAGES
     @commands.Cog.listener()
     async def on_message(self, message):
         pass

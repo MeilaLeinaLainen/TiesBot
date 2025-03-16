@@ -15,7 +15,7 @@ class Client(commands.Bot):
     async def setup_hook(self):
         await self.add_cog(General(self))
         await self.add_cog(Manager(self))
-        #await self.add_cog(Events(self))
+        await self.add_cog(Events(self))
         #await self.add_cog(TiesBotAi(self))
 
     async def on_ready(self):

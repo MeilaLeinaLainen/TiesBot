@@ -10,6 +10,14 @@ class General(commands.Cog):
     @app_commands.command(name="github", description="Get the GitHub link for TiesBot")
     async def github(self, interaction: discord.Interaction):
         try:
-            await interaction.response.send_message("Click [here](https://github.com/meilaleinalainen/TiesBot) for the GitHub link!")
+            await interaction.response.defer()
+            await interaction.followup.send("Click [here](https://github.com/meilaleinalainen/TiesBot) for the GitHub link!")
+        except discord.DiscordException as e:
+            logging.error(e)
+    @github.error 
+    async def github_error(self, interaction: discord.Interaction, error):
+        try:
+            await interaction.response.send_message(f"Caught an unexpected error. Please contact Meila if this persists.")
+            await interaction.channel.send(f"Error: {error}")
         except discord.DiscordException as e:
             logging.error(e)
