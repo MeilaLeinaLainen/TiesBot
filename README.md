@@ -27,6 +27,18 @@ Send a message using @TiesBot.
 
 ---
 
+#### `/bulk-echo (message: str, channel: discord.TextChannel, copy: bool = False)`
+
+Bulk-send up to 10 messages using @TiesBot.
+
+**Arguments:**
+
+- `message: str` *(Required)* – Message to send. If `copy` is True, input the message ID here. Separate messages with a comma (no spaces).
+- `channel: discord.TextChannel` *(Optional, defaults to the command's channel)* – Use the `#channel` format.
+- `copy: bool = False` *(Optional, defaults to False)* – Whether to copy an already sent message.
+
+---
+
 #### `/edit (old_message: str, new_message: str, is_id: bool = False, delete_origin: bool = False)`
 
 Edit a message sent by @TiesBot.
@@ -45,6 +57,10 @@ Edit a message sent by @TiesBot.
 #### `/github`
 
 Sends the GitHub link to @meilaleinalainen's source code.
+
+#### `/replit`
+
+Sends the Replit link to @TiesBot's hosting.
 
 ---
 
