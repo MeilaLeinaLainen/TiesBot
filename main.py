@@ -1,9 +1,10 @@
 from dotenv import load_dotenv
-load_dotenv('.env')
-
-import os, asyncio, json
 from time import sleep
 from src.client import Client
+import os
+import asyncio
+import json
+load_dotenv('.env')
 
 class Runner():
     async def main(self):

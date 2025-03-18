@@ -1,4 +1,6 @@
-import discord, logging, json
+import discord
+import logging
+import json
 from discord.ext import commands
 from discord import app_commands
 
