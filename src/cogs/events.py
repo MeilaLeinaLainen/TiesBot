@@ -1,8 +1,9 @@
-import discord, logging, json, os
+import discord
 from discord.ext import commands
 from discord import app_commands
-
 from math import floor
+import logging
+import json
 
 class Events(commands.Cog):
     def __init__(self, client):

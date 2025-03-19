@@ -1,6 +1,8 @@
-import discord, logging, json
+import discord
 from discord.ext import commands
 from discord import app_commands
+import logging
+import json
 
 class Manager(commands.Cog):
     def __init__(self, client):

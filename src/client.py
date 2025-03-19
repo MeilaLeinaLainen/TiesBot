@@ -1,6 +1,5 @@
-import discord, logging, json, os
+import discord
 from discord.ext import commands
-from discord import app_commands
 
 from src.cogs.general import General
 from src.cogs.manager import Manager
