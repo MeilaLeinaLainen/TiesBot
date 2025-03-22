@@ -12,7 +12,9 @@ from src.cogs.events import Events
 
 class Client(commands.Bot):
     def __init__(self):
-        super().__init__(command_prefix=".", intents=discord.Intents.default())
+        intents=discord.Intents.default()
+        intents.messages = True
+        super().__init__(command_prefix=".", intents=intents)
 
     async def setup_hook(self):
         await self.add_cog(General(self))
@@ -23,3 +25,9 @@ class Client(commands.Bot):
     async def on_ready(self):
         await self.tree.sync()
         print(f"Logged in as {self.user}")
+
+    async def on_message(self, message):
+        if message.author == self.user:
+            return
+        
+        await self.process_commands(message)
